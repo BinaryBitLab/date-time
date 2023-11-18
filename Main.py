@@ -1,7 +1,8 @@
 import nextcord
 from nextcord.ext import commands, tasks
 from datetime import datetime, timedelta
-
+guild_id = #CHANGEME 
+channel_id = #CHANGEME 
 intents = nextcord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -14,8 +15,7 @@ async def on_ready():
 
 @tasks.loop(hours=24)
 async def update_channel():
-    guild_id = 1122248853140291644 
-    channel_id = 1174986288965890079 
+    
 
     guild = bot.get_guild(guild_id)
     channel = guild.get_channel(channel_id)
